@@ -1,0 +1,22 @@
+pool:
+   vmImage: "ubuntu-latest"
+strategy:
+  Matrix:
+    node_13_x:
+      node_version: 13.x
+
+steps:
+- task: NodeTool@@
+  inputs: 
+    versionspec: $(node_version)
+
+#install required package
+- script: |
+    npm install
+    npm build
+  displayname: install required packages - $(MY_ENV_VAR)
+
+#start to execute startPipeline.json
+- script: |
+    node startPipeline.js
+  dispayName: Execute my code - $(My_ENV_VAR) 
