@@ -1,0 +1,14 @@
+{
+    "name": "Pipeline-YAML",
+    "version": "1.0.0",
+    "description": "This is a test by Kallol",
+    "private":true,
+    "scripts":{
+        "test":"echo \"no test yet\""
+    },
+    "dependencies": {},
+    "ripository":{
+        "type":"git",
+        "url":"https://github.com/samantakallol2019/YAML-Pipeline"
+    }
+}
